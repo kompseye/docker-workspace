@@ -1,7 +1,7 @@
 
 # build docker image
 # Reference: https://docs.docker.com/engine/reference/commandline/build/
-alias build="docker build -t docker-workspace --force-rm ."
+alias build="docker build -t docker-workspace -f ws/Dockerfile --force-rm ."
 
 # run docker image as interactive shell, the args "-it" must be used together
 # in order to allocate a tty for the container process
