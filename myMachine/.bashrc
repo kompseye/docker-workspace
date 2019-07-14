@@ -7,8 +7,8 @@ alias build="docker build -t docker-workspace -f ws/Dockerfile --force-rm ."
 # in order to allocate a tty for the container process
 # Reference: https://docs.docker.com/engine/reference/run/
 alias run="docker run \
-  -v /Users/nerditup/developer-tools/git-ws:/repos \
-  -v /Users/nerditup/developer-tools/git-ws/docker-workspace/myContainer:/root \
+  -v /path/to/your/repos:/repos \
+  -v /path/to/your/repos/docker-workspace/myContainer:/root \
   -it \
   --rm \
   docker-workspace"

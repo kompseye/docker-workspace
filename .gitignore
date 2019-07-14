@@ -1,2 +1,7 @@
+# ignore container stuff (b/c of mounted volume)
 myContainer/.bash_history
+myContainer/.config
+myContainer/.nvm
+
+
 notes

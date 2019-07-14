@@ -7,13 +7,14 @@
 
 # A minimal Docker image based on Alpine Linux with a complete package index and only 5 MB in size!
 # https://hub.docker.com/_/alpine/
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 # Use Dockerfile Best Practices
 # https://docs.docker.com/develop/develop-images/dockerfile_best-practices
 
 # update system and install stuff
 RUN apt-get update && apt-get install -y \
+  vim \
   build-essential \
   curl \
   git
@@ -21,8 +22,8 @@ RUN apt-get update && apt-get install -y \
 # Install nvm
 # About nvm: https://github.com/creationix/nvm
 ENV NVM_DIR /usr/local/nvm
-ENV NODE_LTS boron
-ENV NODE_VERSION 6.13.0
+ENV NODE_LTS dubnium
+ENV NODE_VERSION 10.16.0
 
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash \
   && . $NVM_DIR/nvm.sh \
